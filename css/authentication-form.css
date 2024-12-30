@@ -11,7 +11,7 @@ body {
 }
 
 .content {
-  padding: 30px;
+  display: flex;
 }
 
 h2 {
@@ -23,10 +23,12 @@ p {
 }
 
 /* 👇👇👇  ADD YOUR FORM STYLES BENEATH  👇👇👇*/
-
 form {
   border: 1px solid #a9a9a9;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .subtext {
@@ -36,9 +38,25 @@ form {
 
 #sign-in,
 #sign-up {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   width: 100%;
+  padding: 20px;
 }
 
+.form-input-control,
+.form-group-vertical-control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-submit-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 a {
   color: #335eea;
   text-decoration: none;
@@ -47,7 +65,9 @@ a {
 label {
   font-weight: bold;
 }
-
+select {
+  height: 30px;
+}
 input {
   width: 100%;
   height: 30px;
@@ -59,6 +79,7 @@ input[type="radio"] {
   width: max-content;
   height: max-content;
   padding: 0;
+  font-weight: normal;
 }
 
 input[type="submit"] {
@@ -79,7 +100,13 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background: #294bbb;
 }
+.form-group-horizontal-control {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
-.form select {
-  height: 30px;
+.form-checkbox-control > label,
+.form-radio-control > label {
+  font-weight: normal;
 }
